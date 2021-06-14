@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>周麗婷 作品集</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- <script type="text/javascript" src="/js/lib/dummy.js"></script> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="https://vadikom.github.io/smartmenus/src/css/sm-core-css.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://vadikom.github.io/smartmenus/src/css/sm-blue/sm-blue.css"> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://vadikom.github.io/smartmenus/src/jquery.smartmenus.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
+
+    <script id="insert"></script>
+
+    <style>
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="main-nav" role="navigation">
+
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <input id="main-menu-state" type="checkbox" />
+        <label class="main-menu-btn" for="main-menu-state">
+          <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+        </label>
+      
+        <h2 class="nav-brand"><a href="#">Brand</a></h2>
+      
+        <!-- Sample menu definition -->
+        <ul id="main-menu" class="sm sm-blue">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a>
+            <ul>
+              <li><a href="#">Outline</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Work</a>
+            <ul>
+              <li><a href="#">Design</a>
+                <ul>
+                  <li><a href="#">Identity</a></li>
+                  <li><a href="#">Editorial Design</a></li>
+                  <li><a href="#">Event</a></li>
+                  <li><a href="#">Web</a></li>
+                  <li><a href="#">Others</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Gallery</a>
+                <ul>
+                  <li><a href="#">插畫 / 插圖</a></li>
+                  <li><a href="#">插畫案（說明流程）</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Photo</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">E-Shop</a></li>
+
+        </ul>
+      </nav>
+
+
+
+    <script type="text/javascript">//<![CDATA[
+
+
+        // SmartMenus init
+
+        $(function () {
+            $('#main-menu').smartmenus({
+                subMenusSubOffsetX: 1,
+                subMenusSubOffsetY: -8
+            });
+        });
+
+        // SmartMenus mobile menu toggle button
+        $(function () {
+            var $mainMenuState = $('#main-menu-state');
+            if ($mainMenuState.length) {
+                // animate mobile menu
+                $mainMenuState.change(function (e) {
+                    var $menu = $('#main-menu');
+                    if (this.checked) {
+                        $menu.hide().slideDown(250, function () { $menu.css('display', ''); });
+                    } else {
+                        $menu.show().slideUp(250, function () { $menu.css('display', ''); });
+                    }
+                });
+                // hide mobile menu beforeunload
+                $(window).bind('beforeunload unload', function () {
+                    if ($mainMenuState[0].checked) {
+                        $mainMenuState[0].click();
+                    }
+                });
+            }
+        });
+
+
+    //]]></script>
+
+    <script>
+        // tell the embed parent frame the height of the content
+        if (window.parent && window.parent.parent) {
+            window.parent.parent.postMessage(["resultsFrame", {
+                height: document.body.getBoundingClientRect().height,
+                slug: "oxe40pat"
+            }], "*")
+        }
+
+        // always overwrite window.name, in case users try to set it manually
+        window.name = "result"
+    </script>
+
+
+
+
+</body>
+
+</html>
